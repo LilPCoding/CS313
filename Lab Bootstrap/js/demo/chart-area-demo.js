@@ -7,16 +7,17 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   // *     return: '1 234,56'
   number = (number + '').replace(',', '').replace(' ', '');
   var n = !isFinite(+number) ? 0 : +number,
-    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals), // Math.abs = เปลี่ยนลบเป็นบวก
     sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
     dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
     s = '',
     toFixedFix = function(n, prec) {
-      var k = Math.pow(10, prec);
-      return '' + Math.round(n * k) / k;
+      var k = Math.pow(10, prec); // Math.pow = ยกกำลัง
+      // return '' + Math.round(n * k) / k;  Math.round = ปัดทศนิยม
+      return '' + (n * k) / k;
     };
   // Fix for IE parseFloat(0.55).toFixed(0) = 0;
-  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+  s = (prec ? toFixedFix(n, prec) : '' + (n)).split();
   if (s[0].length > 3) {
     s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
   }
@@ -32,9 +33,9 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["ม.4 เทอม 1", "ม.4 เทอม 2", "ม.5 เทอม 1", "ม.5 เทอม 2", "ม.6 เทอม 1", "ม.6 เทอม 2", "ปี 1 เทอม 1", "ปี 1 เทอม 2", "ปี 2 เทอม 1"],
     datasets: [{
-      label: "Earnings",
+      label: "GPA",
       lineTension: 0.3,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "rgba(78, 115, 223, 1)",
@@ -46,7 +47,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      data: [2.67, 3.08, 2.79, 2.72, 2.35, 2.71, 2.83, 2.75, 2.72],
     }],
   },
   options: {
@@ -69,16 +70,15 @@ var myLineChart = new Chart(ctx, {
           drawBorder: false
         },
         ticks: {
-          maxTicksLimit: 7
+          maxTicksLimit: 8 
         }
       }],
       yAxes: [{
         ticks: {
           maxTicksLimit: 5,
           padding: 10,
-          // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value);
           }
         },
         gridLines: {
@@ -110,7 +110,7 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + " : " + number_format(tooltipItem.yLabel);
         }
       }
     }
