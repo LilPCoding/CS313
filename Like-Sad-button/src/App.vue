@@ -1,6 +1,5 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+import Count from "./components/Button.vue";
 </script>
 
 <style>
@@ -57,17 +56,6 @@ import TheWelcome from "./components/TheWelcome.vue";
 }
 
 </style>
-
-<script>
-export default {
-  data: function() {
-    return {
-      count: 0
-    };
-  }
-}
-</script>
-
 
 
 
@@ -188,20 +176,7 @@ export default {
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a>{{count}}</a>
-                    </button>
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fas fa-sad-tear' style='margin-right:3px'></i> <!--sad-->
-                      <a>{{count}}</a>
-                    </button>
+                    <Count></Count>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -232,20 +207,7 @@ export default {
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a>{{ count }}</a>
-                    </button>
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fas fa-sad-tear' style='margin-right:3px'></i> <!--sad-->
-                      <a>{{ count }}</a>
-                    </button>
+                    <Count></Count>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -276,20 +238,7 @@ export default {
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a>{{ count }}</a>
-                    </button>
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fas fa-sad-tear' style='margin-right:3px'></i> <!--edit-->
-                      <a>{{ count }}</a>
-                    </button>
+                    <Count></Count>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -321,20 +270,7 @@ export default {
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a id="clicks"></a>
-                    </button>
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fas fa-sad-tear' style='margin-right:3px'></i> <!--edit-->
-                      <a>{{ count }}</a>
-                    </button>
+                    <Count></Count>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -365,20 +301,7 @@ export default {
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a>{{ count }}</a>
-                    </button>
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class="fas fa-sad-tear" style='margin-right:3px'></i> <!--edit-->
-                      <a>{{ count }}</a>
-                    </button>
+                    <Count></Count>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -409,20 +332,7 @@ export default {
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a>{{ count }}</a>
-                    </button>
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class="fas fa-sad-tear" style='margin-right:3px'></i> <!--edit-->
-                      <a>{{ count }}</a>
-                    </button>
+                    <Count></Count>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -454,20 +364,7 @@ export default {
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a>{{ count }}</a>
-                    </button>
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class="fas fa-sad-tear" style='margin-right:3px'></i> <!--edit-->
-                      <a>{{ count }}</a>
-                    </button>
+                    <Count></Count>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -498,20 +395,7 @@ export default {
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a>{{ count }}</a>
-                    </button>
-                    <button 
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class="fas fa-sad-tear" style='margin-right:3px'></i> <!--edit-->
-                      <a>{{ count }}</a>
-                    </button>
+                    <Count></Count>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -542,20 +426,7 @@ export default {
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a>{{ count }}</a>
-                    </button>
-                    <button
-                      type="button" @click="count+=1"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      <i class="fas fa-sad-tear" style='margin-right:3px'></i> <!--edit-->
-                      <a>{{ count }}</a>
-                    </button>
+                    <Count></Count>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
