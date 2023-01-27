@@ -326,7 +326,7 @@ export default {
                       class="btn btn-sm btn-outline-secondary"
                     >
                       <i class='fa fa-thumbs-up' style='margin-right:3px'></i> <!--Like-->
-                      <a>{{ count }}</a>
+                      <a id="clicks"></a>
                     </button>
                     <button
                       type="button" @click="count+=1"
